@@ -41,12 +41,12 @@ const personasFiltradas = computed(() => {
     <input v-model="filtroNombre" class="form-control mb-2" placeholder="Nombre o apellido" />
     <input v-model="filtroDni" class="form-control mb-2" placeholder="DNI" />
 
-    <!-- Alert -->
+    <!-- Mensaje Alerta -->
     <div v-if="mostrarAlerta" class="alert alert-warning" role="alert">
       Ingresá al menos 3 caracteres en alguno de los filtros para buscar.
     </div>
 
-    <!-- Lista -->
+    <!-- Lista Personas Filtradas -->
     <ul v-if="personasFiltradas.length">
       <li v-for="p in personasFiltradas" :key="p.dni">
         {{ p.nombre }} {{ p.apellido }} - DNI: {{ p.dni }}
